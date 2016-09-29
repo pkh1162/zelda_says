@@ -1,0 +1,296 @@
+
+/*
+@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm) {
+ 
+  .hole {  
+-webkit-clip-path: url("#circle-shape"); 
+   clip-path: url("#circle-shape");
+}
+  
+  
+  .silverBand {  
+  -webkit-clip-path: url("#silverBand-shape"); 
+   clip-path: url("#silverBand-shape");
+}
+  
+  .base {  
+  -webkit-clip-path: url("#base-shape"); 
+   clip-path: url("#base-shape");
+  
+  
+}
+
+  
+}
+
+Need media query, which works, here in order to support firefox
+*/
+
+
+@font-face {
+    font-family: triForceFont;
+    src: url(/fonts/Triforce.tff);
+}
+
+@font-face {
+    font-family: hylianFont;
+    src: url(/fonts/HylianSymbols.ttf);
+}
+
+
+html, body { height: 100%; }
+body {
+	min-width: 700px;
+  position:relative;
+  background: url("http://res.cloudinary.com/dxqcxsull/image/upload/v1475088279/triforce_yaocri.png") center center;
+ 
+}
+
+
+
+/*Ocarina*/
+.contains {
+  display: block;
+  /*background-color: #A10B13;*/
+  opacity: 0.5;
+  margin: auto;
+  border:;
+  min-height: 400px;
+  width: 700px;
+  position: relative;
+  transform: scale(1);
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.base {
+  min-width: 77.2%;
+  min-height: 100%;
+  position: absolute;
+  margin-top: -8%;
+  left: 7%;
+  margin-left: auto;
+  background-color: #2D61FF;
+-webkit-clip-path: polygon(65% 51%, 71% 19%, 78% 19%, 82% 24%, 90% 51%, 100% 63%, 99% 86%, 83% 100%, 39% 95%, 20% 80%, 19% 69%, 25% 59%);
+clip-path: polygon(65% 51%, 71% 19%, 78% 19%, 82% 24%, 90% 51%, 100% 63%, 100% 81%, 78% 100%, 38% 100%, 12% 89%, 4% 74%, 21% 58%);
+}
+
+.hole {
+  position: absolute;
+  background-color: black;
+  
+  width: 15%;
+  height: 30%;
+  -webkit-clip-path: circle(12.8% at 50% 50%);
+clip-path: circle(12.8% at 50% 50%);
+}
+
+
+.silverBand {
+  position: absolute;
+  top: 7%;
+  left: 52.4%;
+  background-color: #93A6A0;
+  width: 28%;
+  height: 30%;
+ -webkit-clip-path: polygon(20% 80%, 81% 80%, 87% 100%, 15% 100%);
+}
+
+
+.leftHole {
+  background-color: black;
+  left: 52%;
+  top: 56%;
+}
+
+
+.upHole {
+  background-color: black;
+  left: 60%;
+  top: 48%;
+}
+
+
+.zHole {
+  background-color: black;
+  left: 32%;
+  top: 40%;
+}
+
+
+.aHole {
+  background-color: black;
+  left: 41%;
+  top: 34%;
+}
+
+.downHole {
+  background-color: black;
+  left: 60%;
+  top: 63%;
+}
+
+.bHole {
+  background-color: black; 
+  left: 22%;
+  top: 38%;
+}
+
+.rightHole {
+  background-color: black;
+  left: 68%;
+  top: 56%;
+}
+
+/*Ocarina End */
+
+
+/*Control buttons*/
+
+.controls {
+  display: block;
+  width: 400px;
+  border: gold 1px solid;
+  text-align: center;
+  margin: 0px auto;
+  position: relative;
+  background-color: #0E4A04;
+  padding: 15px;
+  opacity: 0.8;
+  
+}
+
+
+
+#strict:focus {
+  outline: none;
+}
+
+#wrongPick {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+
+#rightPick {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+
+
+#rightPick img{
+  background-color: white;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+  
+}
+
+
+
+#wrongPick img{
+  background-color: white;
+  position: relative;
+  width: 75px;
+  height: 75px;
+  margin-top: 5px;
+}
+
+button {
+  margin: 3px;
+  position: relative;
+  width: 100px;
+  background-color: white;
+  border: black solid 1px;
+  font-size: 16pt;
+  color: black;
+  font-family: triForceFont;   
+}
+
+#startGame, #strict, #onOff{
+ font-family: triForceFont; 
+ font-size: 16pt;
+}
+
+
+#strict{
+ width: 45%;
+}
+
+
+
+
+/*Control Buttons End*/
+
+/*States*/
+.ocarinaState {
+  opacity: 1;
+}
+
+
+
+.strictMode {
+  background-color: #0f0;
+  color: black;
+}
+
+/*States End*/
+
+
+
+/*Displays*/
+/*Displays End*/
+
+
+
+/**/
+.footer {
+  background-color: #0E4A04;
+  color: gold;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  display: block;
+  margin: 50px auto;
+  margin-bottom: -50px;
+  text-align: center;
+  border-top: 1px solid black;
+  opacity: 0.9;
+  box-sizing: border-box;
+  font-family: triForceFont;
+}
+
+.footer .middle {
+    font-family: triForceFont;
+    font-size: 16pt;
+    top: 5px;
+    color: gold;
+}
+
+.footer .left {
+  font-family: hylianFont;
+  font-size: 30pt;
+  top:-5px;
+  overflow: none;
+  padding-right:0px;
+  padding-left:0px;
+}
+
+
+.footer .right {
+  font-family: hylianFont;
+  font-size: 30pt;
+  top:-5px;
+  padding-left:0px;
+  padding-right:0px;
+    
+}
+
+
+/**/

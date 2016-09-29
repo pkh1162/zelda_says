@@ -1,0 +1,66 @@
+doctype html
+html(lang='en')
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet')
+    script(src='https://code.jquery.com/jquery-2.2.4.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    link(href='/styles/index.css', rel='stylesheet', type='text/css')
+  body
+    .container-fluid
+      .row
+        .col-xs-12
+          .contains
+            .base
+            .silverBand
+            .play.beat
+              #soundBtn1.upHole.hole
+              #soundBtn2.downHole.hole
+              #soundBtn3.leftHole.hole
+              #soundBtn4.rightHole.hole
+              #soundBtn5.aHole.hole
+              #soundBtn6.bHole.hole
+              #soundBtn7.zHole.hole
+    .controls
+      #wrongPick.pull-left
+      #rightPick.pull-right
+      button#onOff.btn On/Off
+      button#startGame.btn Start
+      button#strict.btn
+        | Strict
+      #display
+    // Div used to hold input waiting state
+    #inputWait
+    .footer.row
+      p.left.col-xs-3 j    k    a    e    
+      p.middle.col-xs-6
+        | Created by Paul Henderson 
+        a(data-toggle='tooltip')
+          span.badge i
+      p.right.col-xs-3 j    k    a    e    
+    audio#sound1
+      source(src='/sounds/cUp.wav', type='audio/mpeg')
+    audio#sound2
+      source(src='/sounds/cDown.wav', type='audio/mpeg')
+    audio#sound3
+      source(src='/sounds/cLeft.wav', type='audio/mpeg')
+    audio#sound4
+      source(src='/sounds/cRight.wav', type='audio/mpeg')
+    audio#sound5
+      source(src='/sounds/a.wav', type='audio/mpeg')
+    audio#sound6
+      source(src='/sounds/skullKidLaugh.wav', type='audio/mpeg')
+    audio#sound7
+      source(src='/sounds/getItem.wav', type='audio/mpeg')  
+    svg(width='0', height='0')
+      defs
+        clippath#base-shape(clippathunits='objectBoundingBox')
+          polygon(points='0.65 0.51, 0.71 0.19, 0.78 0.19, 0.82 0.24, 0.90 0.51, 1 0.63, 0.99 0.86, 0.78 1, 0.39 1, 0.12 0.80, 0.09 0.69, 0.12 0.63')
+    svg(width='0', height='0')
+      defs
+        clippath#silverBand-shape(clippathunits='objectBoundingBox')
+          polygon(points='0.2 0.8, 0.82 0.8, 0.87 1, 0.15 1')
+    svg(width='0', height='0', viewbox='', xmlns='http://www.w3.org/2000/svg')
+      clippath#circle-shape
+        circle(cx='50', cy='50', r='12.8')
+    script(src='/js/index.js')
